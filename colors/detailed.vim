@@ -483,12 +483,16 @@ call s:fgbg('Normal', 'gray254', 'gray232')
 " Basic/Default-like Palette {{{
 hi SpecialKey     term=bold ctermfg=81 guifg=Cyan
 hi NonText        term=bold ctermfg=12 gui=bold guifg=Blue
-hi Directory      term=bold ctermfg=159 guifg=Cyan
+hi Directory      term=bold ctermfg=159 guifg=Orange
+hi CursorLine     gui=underline guifg=Black guibg=#028501 
+" dirTree looks useful too
+" ffaef3
 hi ErrorMsg       term=standout ctermfg=15 ctermbg=1 guifg=White guibg=Red
 hi IncSearch      term=reverse cterm=reverse gui=reverse
+hi Search         term=reverse cterm=reverse,bold ctermfg=NONE ctermbg=NONE gui=reverse,bold guifg=NONE guibg=NONE
 hi MoreMsg        term=bold ctermfg=121 gui=bold guifg=SeaGreen
 hi ModeMsg        term=bold cterm=bold gui=bold
-hi LineNr gui=NONE term=NONE guifg=#005f87 ctermfg=24
+hi LineNr         gui=NONE term=NONE guifg=#005f87 ctermfg=24
 hi CursorLineNr   term=bold ctermfg=11 gui=bold guifg=Yellow
 hi Question       term=standout ctermfg=121 gui=bold guifg=Green
 hi StatusLine     term=bold,reverse cterm=bold,reverse gui=bold,reverse
@@ -564,7 +568,7 @@ fun! s:detailed_colors()
   call s:fgbg('detailedXxx', 'gray235', 'red196')
 
   call s:fgbg('Error', 'gray235', 'red196')
-  call s:underline_fgbg('Search', 'gray254', 'gray235')
+  " call s:underline_fgbg('Search', 'gray254', 'gray235')
 
   call s:fgbg('Folded', 'blue37', 'gray237')
 
